@@ -1480,7 +1480,7 @@ Display the `<AddTask />` component on the bottom after all the previous content
   render(){
     return (
       <div>
-	      <h1>Project Details</h1>
+        <h1>Project Details</h1>
 
         <h2>{this.state.title}</h2>    
         <h4>{this.state.description}</h4>
@@ -1685,7 +1685,10 @@ import axios from 'axios';
 
 
 class TaskDetails extends Component {
-	state = {};
+  state = {
+    title: '',
+    descritpion: ''
+  };
 
   componentDidMount(){
     this.getTheTask();
@@ -1693,10 +1696,12 @@ class TaskDetails extends Component {
 
   getTheTask = () => {
     const { id, taskId } = this.props.match.params;
-    axios.get(`http://localhost:5000/api/projects/${id}/tasks/${taskId}`)
+    axios.get(`http://localhost:5000/api/tasks/${taskId}`)
     	.then( (apiResponse) => {
-      	const theTask = apiResponse.data;
-      	this.setState(theTask);
+          const theTask = apiResponse.data;
+          const { title, description} = theTask;
+
+      	  this.setState({ title, description });
     })
     .catch( (err) => console.log(err))
   }
