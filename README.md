@@ -1519,7 +1519,9 @@ Display the `<AddTask />` component on the bottom after all the previous content
 
 
 
-The `state` of the `ProjectDetails` component already contain all information about the project that we need. The last step would be to display all of the `tasks` coming from the state of th
+The `state` of the `ProjectDetails` component already contains all the information that we need about the project. The last step would be to display all of the `tasks` coming from the `state` of the `ProjectDetails`.
+
+<br>
 
 ##### `src/pages/ProjectDetails/ProjectDetails.js`
 
@@ -1572,6 +1574,23 @@ The `state` of the `ProjectDetails` component already contain all information ab
 #### Create Route to render `<TaskDetails>`
 
 
+Import `TaskDetails` in the `App` component.
+
+
+
+<br>
+
+
+
+##### `src/App.js`
+
+```jsx
+// src/App.js  
+
+import AddTask from "./../../components/AddTask/AddTask";
+```
+
+
 
 ##### `src/App.js`
 
@@ -1579,14 +1598,6 @@ The `state` of the `ProjectDetails` component already contain all information ab
 // 	src/App.js
 
 //	...
-
-//	...
-
-
-
-import TaskDetails from './components/tasks/TaskDetails';    // 			<-- IMPORT
-
-
 
 
 class App extends Component {
@@ -1601,7 +1612,7 @@ class App extends Component {
           
           {/* ADD - route to display task details */}
           
-          <Route                                       {/* ADD Route*/}
+          <Route                                                         {/* ADD Route*/}
             exact
             path="/projects/:id/tasks/:taskId"
             component={TaskDetails}
