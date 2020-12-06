@@ -949,9 +949,9 @@ export default App;
 
 
 
-Project details page should contain a `state` and a `componentDidMount` method. Once the component is rendered we will need to make the request to the server/API and get the data of the specific project and then display it in the comonent.
+Project details page should contain a `state` and a `componentDidMount` method. Once the component is rendered we will need to make the request to the server/API and get the data of the specific project and then display it in the component.
 
-Id of the project should be available via the URL param and we should be able to access it via `this.props.match.params` object.
+Id of the project will be available via the URL param and we should access it via `this.props.match.params` object.
 
 
 
