@@ -1035,8 +1035,12 @@ It will contain 2 inputs `title` and `description` used to update an existing pr
 
 We will create the method `handleFormSubmit` but leave it empty. In the step after this one we will add functionality to it, but for the moment leave it empty.
 
+<br>
+
 As `EditProject` component will not be directly rendered by the  `react-router-dom` `<Route>`, it will not have access to the react-router props (match, location, history) needed in order to access the URL coming from the Browser's navigation bar. 
-To achieve this we have to use a special component ([HOC](https://reactjs.org/docs/higher-order-components.html)) `withRouter` coming from `react-router`. `withRouter` is used to inject react-router props (match, location, history) to any component and it is done by wrapping the component using `withRouter` e.g:  `withRouter(SomeComponent)`.  
+<br>
+To achieve this we have to use a special component ([HOC](https://reactjs.org/docs/higher-order-components.html)) `withRouter` coming from `react-router`. `withRouter` is used to inject react-router props (match, location, history) to any component and it is done by wrapping the component using `withRouter` e.g:  `withRouter(SomeComponent)`.
+<br>
 This will help us to access the project's id from the URL ( via `this.props.match.params`).
 
 
@@ -1103,10 +1107,6 @@ class EditProject extends Component {
 // to the component. This will help us to access the project's id from the URL (this.props.match.params)
 export default withRouter(EditProject);
 ```
-
-
-
-
 
 
 
@@ -1301,10 +1301,13 @@ Add the delete button to the `render()`:
 ### Create `AddTask` component
 
 
-As `AddTask` component is not directly rendered by the  `react-router-dom` `<Route>`, it doesn't have access to the react-router props (match, location, history) needed in order to access the URL coming from the Browser's navigation bar. To achieve this we have to use a special component ([HOC](https://reactjs.org/docs/higher-order-components.html)) `withRouter` coming from `react-router`. `withRouter` is used to inject react-router props (match, location, history) to any component and it is done by wrapping the component using `withRouter` e.g:  `withRouter(SomeComponent)`.  
+As `AddTask` component is not directly rendered by the  `react-router-dom` `<Route>`, it doesn't have access to the react-router props (match, location, history) needed in order to access the URL coming from the Browser's navigation bar. 
+<br>
+To achieve this we will have to use a special component ([HOC](https://reactjs.org/docs/higher-order-components.html)) `withRouter` coming from `react-router`. `withRouter` is used to inject react-router props (match, location, history) to any component and it is done by wrapping the component using `withRouter` e.g:  `withRouter(SomeComponent)`.
+<br>
 This will help us to access the project's id from the URL ( via `this.props.match.params`).
 
-
+<br>
 
 ##### `src/components/AddTask/AddTask.js`
 
