@@ -1738,11 +1738,24 @@ export default TaskDetails;
 
 
 
-- Create `<EditTask>` component which makes a `PUT` request to the API to update the task.  
+- Create `<EditTask>` component which makes a `PUT` request (using `axios`) to the API to update the task.
 
   - Render the `<EditTask>` component inside of `<TaskDetails>` .
 
-  
+    
+    <br>
+    
 
-- Create a delete button in the `<TaskDetails>` which calls a function to send  `DELETE` request via axios to the API (deletes the task by id),  and then does a new `GET `request to get the updated project and it's tasks (you can reuse the function from `<ProjectDetails>` `getSingleProject()`, by passing it as a prop  ).
+- In the `<TaskDetails>` Create a delete button with an event listener used to send a `DELETE` request ( using `axios`) to the API to delete a task by id. As soon as the `DELETE` request is done you should display the `<ProjectDetails>` page.
 
+
+<br>
+
+
+
+<h2 style="background-color: #66D3FA; color: white; display: inline; padding: 10px; border-radius: 10;">21</h2>
+
+
+### BONUS:
+
+- Update the `EditProject` component so that it displays the selected project `title` and `description` in the input fields before editing.
