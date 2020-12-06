@@ -1612,11 +1612,7 @@ class App extends Component {
           
           {/* ADD - route to display task details */}
           
-          <Route                                                         {/* ADD Route*/}
-            exact
-            path="/projects/:id/tasks/:taskId"
-            component={TaskDetails}
-          /> 
+          <Route exact path="/projects/:id/tasks/:taskId" component={TaskDetails} />    {/* ADD Route*/}
 
           
         </Switch>
