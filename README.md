@@ -1759,4 +1759,4 @@ export default TaskDetails;
 
 ### BONUS:
 
-- Update the `EditProject` component so that it displays the selected project `title` and `description` in the input fields before editing.
+- Update the `EditProject` component so that it displays the selected project `title` and `description` in the input fields.
