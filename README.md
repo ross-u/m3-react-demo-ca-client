@@ -1642,6 +1642,42 @@ export default App;
 #### Create `<TaskDetails>` component
 
 
+<br>
+
+
+`TaskDetails` component will be rendered once user clicks on a specific task `<Link>` shown in the `ProjectDetails` page:
+
+ `<Link key={task._id} to{``/projects/${this.state._id}/tasks/${task._id}  ``}  \>`
+
+
+
+<br>
+
+
+
+As `TaskDetails` component is directly rendered by the `react-router-dom` `<Route>` it will by default have access to react-router specific `props` ( `location`, `match` and `history`) and there is no need to additionaly include `withRouter`. To summarize, `withRouter` is used only for the components that are not directly displayed by the `<Route>`, to give them access to react-router specific `props`.
+
+<br>
+
+
+
+You will notice that method `getTheTask` needs the `props` value provided by the react-router ( `this.props.match.params`) in order to access the id of the Task from URL in the Broweser's navigation bar. This value is used to create a HTTP request (using `axios`) to the server/API and get the details of the specific task.
+
+
+
+<br>
+
+
+
+In addition you will notice that `<button>Go Back</button>` has an `onClick` event listener, invoking a special method `this.props.history.goBack` provided by the `react-router-dom`. This method is used to navigate to the previous page and when called it simply goes back to the previous URL and displays the previously rendered page component.
+
+Same can be achived in a slightly more verbose way by using the `Link` component ( e.g. `<Link to={}></Link>` ).
+
+
+
+<br>
+
+
 
 ##### `src/components/tasks/TaskDetails.js`
 
