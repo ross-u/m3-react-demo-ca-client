@@ -1647,7 +1647,7 @@ export default App;
 
 `TaskDetails` component will be rendered once user clicks on a specific task `<Link>` shown in the `ProjectDetails` page:
 
- `<Link key={task._id} to{``/projects/${this.state._id}/tasks/${task._id}  ``}  \>`
+ ``<Link key={task._id} to{`/projects/${this.state._id}/tasks/${task._id}  `}  \>``
 
 
 
