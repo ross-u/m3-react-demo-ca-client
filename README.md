@@ -1096,7 +1096,7 @@ class EditProject extends Component {
 
 // By wrapping EditProject in withRouter, 
 // we inject react-router props (match, location, history)
-// to the component that help us to get value from the URL (this.props.match.params)
+// to the component. This will help us to access the project's id from the URL (this.props.match.params)
 export default withRouter(EditProject);
 ```
 
