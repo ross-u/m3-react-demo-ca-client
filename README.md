@@ -1264,7 +1264,7 @@ Add the delete button to the `render()`:
   render(){
     return (
       <div>
-	      <h1>Project Details</h1>
+	<h1>Project Details</h1>
 
         <h2>{this.state.title}</h2>    
         <h4>{this.state.description}</h4>
