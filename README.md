@@ -909,7 +909,7 @@ Import and add the 2 newly created components `Navbar` and `ProjectDetails` to `
 import ProjectList from './pages/ProjectList/ProjectList';
 
 import ProjectDetails from './pages/ProjectDetails/ProjectDetails';     //	IMPORT
-import Navbar from './components/Navbar/Navbar.js`';                      //	IMPORT
+import Navbar from './components/Navbar/Navbar.js';                      //	IMPORT
 
 
 function App() {
